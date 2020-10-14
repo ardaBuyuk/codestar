@@ -1,0 +1,10 @@
+section > h1 {
+    text-align: center;
+}
+section > .html-posts > h2{
+    display: none;
+}
+section > .html-posts > .for-mobile {
+    display: block;
+    margin-right: 30px;
+}

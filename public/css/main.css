@@ -1,0 +1,75 @@
+*{
+    font-family: 'Quicksand', sans-serif !important;
+}
+body{
+    background-color: #272427 !important;
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+.nav-item {
+    margin: 3px;
+}
+nav{
+    border-bottom: 4px solid rgb(34, 33, 33);
+    color: #fff !important;
+}
+section{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.html-posts{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    border-bottom: 2px solid #fff;
+    padding: 5px;
+}
+.html-posts > #search{
+    width: 400px;
+}
+.for-mobile {
+    display: none;
+}
+.posts {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #252325 !important;
+    color: #fff !important;
+    margin: 20px !important;
+    border-color: black !important;
+}
+.card-title{
+    text-transform: capitalize !important;
+}
+.html-textarea {
+    background-color: #252325 !important;
+    color: gray !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+.css-textarea {
+    background-color: #252325 !important;
+    color: gray !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+.js-textarea {
+    background-color: #252325 !important;
+    color: gray !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+.py-textarea {
+    background-color: #252325 !important;
+    color: gray !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+.shareForm {
+    width: 1000px;
+    height: 480px;
+}

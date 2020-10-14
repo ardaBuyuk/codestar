@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeStar | Kod paylaşım platformu">
+    <title>CodeStar | Kod Paylaşım Platformu</title>
+    <link rel = "icon" href = "/images/logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top">
+       <a href = "/"> <img height = "50" src="/images/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="/">Anasayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="/html">HTML <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="/javascript">JavaScript <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="/python">Python <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="dropdown">
+              <% if(!currentUser){ %>
+              <a href = "/login" class="btn btn-outline-success mr-1 " type="button" id="loginBtn">
+                Giriş Yap
+              </a>
+              <a href = "/register" class="btn btn-outline-success mr-1 " type="button" id="registerBtn">
+                Kayıt Ol
+              </a>
+              <% } else { %>
+                <p href = "#" class="mr-3 d-inline ">
+                   <%= currentUser.username %>
+                </p>
+                <a href = "/shareCodes" class="btn btn-outline-success mr-1 " type="button">
+                 Kod Paylaş
+                </a>
+                <a href = "/logout" class="btn btn-outline-danger mr-1 " type="button">
+                  Çıkış Yap
+                 </a>
+                 <% } %>
+              </div>
+          </form>
+        </div>
+      </nav>
+<section>
+  <div class="card-body bg-dark mt-4" style="color: white; width: 817px;">
+    <h3><%= foundCode.title %></h3>
+  <%= foundCode.description %><br>
+  <span style="color: grey;">Paylaşan: <%= foundCode.author %></span><br><br>
+
+      <h4>JavaScript:</h4>
+      <textarea name="py" class = "form-control py-textarea" id="" cols="30" rows="10"><%= foundCode.javascript %></textarea>
+  </div>
+
+
+</section>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.bundle.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
